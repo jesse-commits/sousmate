@@ -1,3 +1,12 @@
 body {
-    
+
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+img {
+    width: 100%;
 }
