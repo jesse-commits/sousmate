@@ -1,0 +1,88 @@
+.card {
+    padding: 45px 30px;
+    max-width: 27.5rem;
+    border-radius: 6px;
+    margin: 0 auto 20px auto;
+    box-shadow: 2px 1px 2px 2px aliceblue;
+
+    &__title {
+        font-size: 2rem;
+        margin: 0 0 60px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 1rem;
+        line-height: 1.5;
+        width: 100%;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    &__logo {
+        height: 160px;
+        width: 160px;
+        margin-bottom: 20px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--small {
+        padding: 20px;
+        line-height: 1.5;
+        width: 40%;
+        max-width: 440px;
+        border-radius: 6px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        background-color: aliceblue;
+    }
+
+    &--small-title {
+        font-size: 1rem;
+    }
+
+    &--large {
+        max-width: 52rem;
+        border-radius: 6px;
+        margin: 0 auto;
+        position: relative;
+        padding: 20px;
+        box-shadow: 2px 1px 2px 2px aliceblue;
+
+        & img {
+            height: 100%;
+        }
+    }
+
+    &--promise {
+        margin: 0;
+        padding: 40% 60px 60px 60px;
+        
+    }
+
+    &--promise-title {
+        margin: 0 0 20px 0;
+        padding: 0;
+        font-weight: 500;
+    }
+
+    &--promise-text {
+        line-height: 1.5;
+        text-align: center;
+        color: white;
+        font-weight: 400;
+    }
+
+    &--promise-number {
+        text-align: center;
+        font-weight: 600;
+        font-size: 3.75rem;
+        color: white;
+        position: relative;
+        bottom: -110px;
+    }
+}
