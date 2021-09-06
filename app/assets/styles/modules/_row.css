@@ -11,11 +11,21 @@
     }
 
     &--medium-8 {
-        display: grid;
-        grid-template-columns: 40% 60%;
+        
+        @mixin atMedium {
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
     }
 
     &--xs-gutters {
         column-gap: 25px;
+    }
+
+    &--b-border {
+        border-bottom: 1px solid lightsteelblue;
+        @mixin atMedium {
+            border-bottom: none;
+        }
     }
 }

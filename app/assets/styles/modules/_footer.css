@@ -16,6 +16,10 @@ footer {
 
     & a {
         color: lightsteelblue;
+        font-size: .7rem;
+        @mixin atMedium {
+        font-size: 1rem;
+        }
     }
 }
 

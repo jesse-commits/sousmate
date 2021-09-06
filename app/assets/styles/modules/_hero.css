@@ -1,13 +1,15 @@
 .hero {
 
-    min-height: 40vh;
+    min-height: 10vh;
     padding: 0 18px;
+    margin-top: 4rem;
     
 
     @mixin atMedium {
         padding: 3.75rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         font-size: 2.25rem;
+        min-height: 40vh;
     }
 
     &__text {

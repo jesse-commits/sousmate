@@ -1,7 +1,20 @@
 .nav-menu {
     float: right;
     margin-top: -5px;
-    
+
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    @mixin atMedium {
+        position: static;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        visibility: visible;
+    }
     
     & ul {
         margin: 0;

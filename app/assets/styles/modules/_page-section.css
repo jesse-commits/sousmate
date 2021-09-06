@@ -10,6 +10,7 @@
         min-height: 80vh;
         background-color: rgb(230, 182, 52);
         padding: 0 18px;
+        
         @mixin atMedium {
             min-height: 100vh;
             padding: 0;

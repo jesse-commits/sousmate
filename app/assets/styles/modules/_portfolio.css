@@ -1,6 +1,10 @@
 .portfolio {
-    padding: 60px;
+    padding: 20px 18px 60px 18px;
     background-color: black;
+
+    @mixin atMedium {
+        padding: 60px;
+    }
     
     & img {
         width: 100%;
@@ -8,13 +12,16 @@
     }
 
     & h1 {
-        margin: 38% 0 20px 0;
+        
         max-width: 640px;
         font-size: 2rem;
         line-height: 1.2;
         color: white;
         text-align: center;
         font-weight: 500;
+        @mixin atMedium {
+            margin: 38% 0 20px 0;
+        }
     }
 
     & p {

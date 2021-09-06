@@ -1,7 +1,12 @@
 .feature {
 
-    height: 80vh;
-    padding: 20%;
+    
+    padding: 40px 18px;
+
+    @mixin atMedium {
+        padding: 20%;
+        height: 80vh;
+    }
 
     &__content {
        
@@ -15,8 +20,11 @@
         
     }
     &__title {
-        font-size: 1.5rem;
+        
         margin-bottom: 1rem;
+        @mixin atMedium {
+            font-size: 1.5rem;
+        }
     }
 
     & img {
