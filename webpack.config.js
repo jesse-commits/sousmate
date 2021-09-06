@@ -7,6 +7,8 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 //minimize or compress the extracted stylesheet
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+//copy over html files which know the names to the files needed, leverage for both dev and build tasks.
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const postCSSPlugins = [
     require('postcss-simple-vars'),
@@ -24,6 +26,7 @@ let cssConfig = {
 //the same.. any configuration that can be shared with dev and build here
 let config = {
     entry: './app/assets/scripts/App.js',
+    plugins: [new HtmlWebpackPlugin({filename: 'index.html', template: './app/index.html'})],
     module: {
         rules: [
             cssConfig
@@ -69,7 +72,7 @@ if(currentTask == 'build') {
         minimizer: [`...`, new CssMinimizerPlugin()]
     }
     //delete everything in the dist folder so we have the freshest copies.
-    config.plugins = [new CleanWebpackPlugin(), new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'})]
+    config.plugins.push(new CleanWebpackPlugin(), new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}))
 }
 
 
