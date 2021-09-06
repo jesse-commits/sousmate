@@ -12,7 +12,7 @@
 
     &--medium-8 {
         
-        @mixin atMedium {
+        @mixin atLarge {
             display: grid;
             grid-template-columns: 40% 60%;
         }
