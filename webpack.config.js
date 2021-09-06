@@ -9,8 +9,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 //copy over html files which know the names to the files needed, leverage for both dev and build tasks.
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-//copy over multiple html files if needed fs-xtra 
+//copy over multiple html files if needed fs-xtra , copy over images too
 const fse = require('fs-extra')
+
 
 const postCSSPlugins = [
     require('postcss-simple-vars'),
@@ -79,6 +80,17 @@ if(currentTask == 'dev') {
 
 //setup unique tasks for the build statement
 if(currentTask == 'build') {
+    //browser compatable so we can use moden js and it can be used in all browsers
+    config.module.rules.push({
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env']
+            }
+        }
+    })
     // push onto array, but we want to use loader we just downloaded
     cssConfig.use.unshift(MiniCssExtractPlugin.loader)
     config.output = {
