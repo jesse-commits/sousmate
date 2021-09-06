@@ -2,7 +2,7 @@
     padding: 20px 18px 60px 18px;
     background-color: black;
 
-    @mixin atMedium {
+    @mixin atLarge {
         padding: 60px;
     }
     
