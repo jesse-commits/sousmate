@@ -1,21 +1,34 @@
 .headline {
-    font-size: 3.75rem;
+    font-size: 2.6rem;
     line-height: 1.1;
     font-weight: 500;
     margin: 0;
     padding: 0;
 
+    @mixin atMedium {
+        font-size: 3.75rem;
+    }
+
     &__caption {
        width: 100%;
        text-align: center;
-       margin-top: 60px;
+       
        font-weight: 500;
+
+       @mixin atMedium {
+        margin-top: 60px;
+       }
     }
 
     &--smaller {
         font-size: 2rem;
         text-align: center;
         margin-top: 100px;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        @mixin atMedium {
+            margin-bottom: 0;
+        }
     }
 
     &--white {
@@ -29,11 +42,17 @@
     &__sub {
         max-width: 40rem;
         font-size: 140%;
-        line-height: 1.5;
+        line-height: 1.1;
+        padding: 0 18px;
         font-weight: 400;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
+
+        @mixin atMedium {
+            line-height: 1.5;
+            padding: 0;
+        }
     }
 }
