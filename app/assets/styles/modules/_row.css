@@ -9,6 +9,11 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    &--medium-8 {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
     &--xs-gutters {
         column-gap: 25px;
     }

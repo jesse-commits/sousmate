@@ -18,6 +18,11 @@
     margin-top: 40px;
 }
 
+&--centered {
+    width: 100%;
+    text-align: center;
+}
+
 }
 
 

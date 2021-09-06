@@ -1,0 +1,45 @@
+.portfolio {
+    padding: 60px;
+    background-color: black;
+    
+    & img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    & h1 {
+        margin: 38% 0 20px 0;
+        max-width: 640px;
+        font-size: 2rem;
+        line-height: 1.2;
+        color: white;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    & p {
+        line-height: 1.5;
+        color: white;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    & ul {
+        margin: 10px auto;
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    & li {
+        float: left;
+        list-style: none;
+        color: white;
+        padding: 5px;
+        border: 1px solid white;
+        margin: 0 5px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,20 @@
+.hidden-label {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+input[type="email"] {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 40px;
+    margin: 0;
+    width: 86%;
+    border: 1px solid #cdcdcd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

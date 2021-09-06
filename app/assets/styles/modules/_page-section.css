@@ -6,4 +6,13 @@
         background-color: rgb(230, 182, 52);
        
     }
+
+    &--green {
+        background-color: $mainGreen;
+    }
+
+    &--large {
+        margin: 4.4rem 0;
+    }
+
 }
