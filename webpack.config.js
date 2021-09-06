@@ -9,6 +9,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 //copy over html files which know the names to the files needed, leverage for both dev and build tasks.
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+//copy over multiple html files if needed fs-xtra 
+const fse = require('fs-extra')
 
 const postCSSPlugins = [
     require('postcss-simple-vars'),
@@ -23,10 +25,23 @@ let cssConfig = {
     use: ['css-loader?url=false', {loader: 'postcss-loader', options: {postcssOptions: {plugins: postCSSPlugins}}}]
 }
 
-//the same.. any configuration that can be shared with dev and build here
+//an array html plugin once for each html file we have
+//return an array with all files ending in html
+let pages = fse.readdirSync('./app').filter(function(file) {
+    return file.endsWith('.html')
+// map will return a new array of multiple html webpack plugins
+//use once for each html templates
+}).map(function(page){
+    return new HtmlWebpackPlugin({
+        filename: page,
+        template: `./app/${page}`
+    })
+})
+
+//shared.. any configuration that can be shared with dev and build here
 let config = {
     entry: './app/assets/scripts/App.js',
-    plugins: [new HtmlWebpackPlugin({filename: 'index.html', template: './app/index.html'})],
+    plugins: pages,
     module: {
         rules: [
             cssConfig
