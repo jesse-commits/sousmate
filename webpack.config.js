@@ -20,6 +20,15 @@ const postCSSPlugins = [
     require("postcss-import")
 ]
 
+//can run any task besides just copying over the images folder.
+class RunAfterCompile {
+    apply(compiler) {
+        compiler.hooks.done.tap('Copy images', function() {
+            fse.copySync('./app/assets/images', './dist/assets/images')
+        })
+    }
+}
+
 let cssConfig = {
     test: /\.css$/i,
     use: ['css-loader?url=false', {loader: 'postcss-loader', options: {postcssOptions: {plugins: postCSSPlugins}}}]
@@ -87,7 +96,12 @@ if(currentTask == 'build') {
         minimizer: [`...`, new CssMinimizerPlugin()]
     }
     //delete everything in the dist folder so we have the freshest copies.
-    config.plugins.push(new CleanWebpackPlugin(), new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}))
+    //set things up so each plugin call is on a new line.
+    config.plugins.push(
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
+        new RunAfterCompile()
+    )
 }
 
 
