@@ -24,8 +24,6 @@
 
     &--b-border {
         border-bottom: 1px solid lightsteelblue;
-        @mixin atMedium {
-            border-bottom: none;
-        }
+    
     }
 }

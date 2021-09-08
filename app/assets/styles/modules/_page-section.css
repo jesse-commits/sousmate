@@ -32,4 +32,12 @@
          }
     }
 
+    &--recipe {
+        padding: 2rem 0;
+
+        @mixin atSmall {
+            padding: 0;
+        }
+    }
+
 }
