@@ -12,9 +12,42 @@
         min-height: 40vh;
     }
 
+    &__title {
+        color: white;
+        @mixin atSmall {
+            color: black;
+        }
+    }
+
     &__text {
         margin: 20px 0 0 0;
         padding: 0;
         font-weight: 400;
+        max-width: 350px;
+        color: white;
+
+        @mixin atSmall {
+            max-width: 100%;
+            color: black;
+        }
+    }
+
+    &__image {
+        position: relative;
+        height: 50vh;
+    }
+
+    &__content {
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        @mixin atSmall {
+            position: static;
+            top: 0;
+            left: 0;
+            transform: translateY(0);
+        }
+
     }
 }

@@ -25,11 +25,18 @@
         margin: 4.4rem 0;
     }
 
-    &--hidden {
+    &--hidden-at-small {
         display: none;
          @mixin atSmall {
              display: grid;
          }
+    }
+
+    &--view-at-small {
+        display: inline-block;
+        @mixin atSmall {
+            display: none;
+        }
     }
 
     &--recipe {
