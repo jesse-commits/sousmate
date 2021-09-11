@@ -1,15 +1,13 @@
 .hero {
 
-    min-height: 10vh;
     padding: 0 18px;
     margin-top: 4rem;
-    
+    display: inline-block;
 
-    @mixin atMedium {
-        padding: 3.75rem;
-        margin-top: 1.5rem;
+    @mixin atSmall {
+     
         font-size: 2.25rem;
-        min-height: 40vh;
+        min-height: 30vh;
     }
 
     &__title {
@@ -34,19 +32,27 @@
 
     &__image {
         position: relative;
-        height: 50vh;
+        height: 53vh;
     }
 
     &__content {
         position: absolute;
         left: 40px;
-        top: 50%;
+        top: 45%;
+        max-width: 300px;
+        max-height: 160px;
         transform: translateY(-50%);
+        background-color: rgba(0,0,0,.2);
+
+
         @mixin atSmall {
             position: static;
+            max-height: 100%;
+            max-width: 100%;
             top: 0;
             left: 0;
             transform: translateY(0);
+            background-color: transparent;
         }
 
     }

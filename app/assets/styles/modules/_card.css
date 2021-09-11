@@ -67,8 +67,8 @@
          }
 
         & img {
-            height: 60%;
-            @mixin atMedium {
+            height: 70%;
+            @mixin atSmall {
                 height: 100%;
             }
         }

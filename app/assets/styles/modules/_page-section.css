@@ -27,13 +27,16 @@
 
     &--hidden-at-small {
         display: none;
+        
          @mixin atSmall {
-             display: grid;
+            display: grid;
          }
+
     }
 
     &--view-at-small {
         display: inline-block;
+
         @mixin atSmall {
             display: none;
         }
