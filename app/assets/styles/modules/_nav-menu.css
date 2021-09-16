@@ -21,6 +21,7 @@
     }
 
     & li {
+        
         margin: 5px;
         list-style: none;
         float: left;
@@ -36,17 +37,26 @@
     &__box {
         @mixin clearfix;
         display: inline-block;
-        
         margin: 0;
 
-        @mixin atMedium {
-            padding: 0 40px;
-        }
     }
 
 
     &__logo {
         padding: 0;
         margin: 0;
+    }
+
+    &__menu-icon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-color: black;
+        top: 30px;
+        right: 20px;
+
+        @mixin atMedium {
+            display: none;
+        }
     }
 }

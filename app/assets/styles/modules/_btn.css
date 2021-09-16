@@ -8,14 +8,15 @@
     font-weight: 500;
 
 &--large {
-    
+    height: 3rem;
     display: inline-block;
-    font-size: .6rem;
-    height: 3.5rem;
+    padding: 0 20px;
 
     @mixin atMedium {
-        padding: 20px 30px;
-        font-size: .8rem;
+        height: 3.3rem;
+        display: block;
+        font-size: 1rem;
+        padding: 0 30px;
     }
 }
 
