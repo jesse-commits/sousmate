@@ -27,6 +27,12 @@
         float: left;
     }
 
+    & a {
+        text-decoration: none;
+        color: white;
+        padding: 8px;
+    }
+
 
 }
 
