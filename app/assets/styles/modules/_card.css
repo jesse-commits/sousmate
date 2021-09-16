@@ -61,6 +61,7 @@
         border-radius: 6px;
         margin: 0 auto;
         position: relative;
+        padding: 14px;
         
         
          @mixin atMedium {

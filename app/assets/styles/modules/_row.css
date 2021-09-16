@@ -22,6 +22,15 @@
         column-gap: 25px;
     }
 
+    &--lg-gutters {
+        column-gap: 5px;
+
+        @mixin atSmall {
+            column-gap: 150px;
+        }
+        
+    }
+
     &--b-border {
         border-bottom: 1px solid lightsteelblue;
     
