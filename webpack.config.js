@@ -104,8 +104,7 @@ if(currentTask == 'build') {
     config.optimization = {
         splitChunks: {chunks: 'all'},
         minimize: true,
-        //... use default built in webpack minimizer, but b is our plugin
-        minimizer: [`...`, new CssMinimizerPlugin()]
+        
     }
     //delete everything in the dist folder so we have the freshest copies.
     //set things up so each plugin call is on a new line.
