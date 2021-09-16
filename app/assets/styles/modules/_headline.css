@@ -55,4 +55,12 @@
             padding: 0;
         }
     }
+
+    &--not-centered {
+        text-align: left;
+    }
+}
+
+.general-content {
+    padding: 0 18px;
 }
