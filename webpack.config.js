@@ -103,7 +103,7 @@ if(currentTask == 'build') {
     //save users data, copies over vendor js code as a separate file.
     config.optimization = {
         splitChunks: {chunks: 'all'},
-        minimize: true,
+        minimize: false,
         //... use default built in webpack minimizer, but b is our plugin
         minimizer: [`...`, new CssMinimizerPlugin()]
     }
