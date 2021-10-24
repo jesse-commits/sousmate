@@ -17,7 +17,7 @@
 }
 
 @define-mixin atSmallMax {
-    @media (max-width: 580px){
+    @media (max-width: 540px){
         @mixin-content;
     }
 }

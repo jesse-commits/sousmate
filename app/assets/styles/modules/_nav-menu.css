@@ -8,23 +8,6 @@ nav {
     overflow: hidden;
     visibility: hidden;
 
-    @mixin atMedium {
-        position: static;
-        height: auto;
-        width: auto;
-        overflow: visible;
-        visibility: visible;
-    }
-
-    &.show {
-        position: static;
-        height: auto;
-        width: auto;
-        overflow: visible;
-        visibility: visible;
-    }
-
-    
     & ul {
         margin: 0;
     }
@@ -42,6 +25,22 @@ nav {
         padding: 8px;
     }
 
+    @mixin atMedium {
+        position: static;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        visibility: visible;
+    }
+
+    &.show {
+        position: static;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        visibility: visible;
+    }
+
 }
 
 nav.show{
@@ -49,10 +48,9 @@ nav.show{
     @mixin atSmallMax{
 
         & ul {
-            position: absolute;
-            background-color: blue;
-            height: 100%;
-            width: 100%;
+            position: fixed;
+            max-height: 100vh;
+            max-width: 100vh;
             left: 0;
             margin: 0;
             padding: 0;
@@ -62,15 +60,26 @@ nav.show{
         & li {
             display: block;
             width: 100%;
+            height: 100px;
             background-color: black;
             color: white;
             margin: 0;
-            padding: 10%;
+            padding: 20px 0;
         }
         & button {
             width: 100%;
             background-color: black;
+            border-radius: 0px;
+            height: 100px;
+        }
 
+        & a {
+            background-color: black;
+            color: white;
+            padding: 40px 140px;
+        }
+        & a:hover {
+            background-color: red;
         }
     }
     
@@ -97,9 +106,10 @@ nav.show{
         width: 20px;
         height: 20px;
         position: absolute;
-        background-color: black;
+        background-color: blue;
         top: 30px;
         right: 20px;
+        z-index: 10;
 
         @mixin atMedium {
             display: none;
