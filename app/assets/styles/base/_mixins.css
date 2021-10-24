@@ -15,6 +15,12 @@
         @mixin-content;
     }
 }
+
+@define-mixin atSmallMax {
+    @media (max-width: 580px){
+        @mixin-content;
+    }
+}
 @define-mixin clearfix {
     &::after {
         content: "";
