@@ -3,7 +3,7 @@ nav {
     margin-top: -5px;
 
     position: absolute;
-    height: 0;
+    height: 0;;
     width: 0;
     overflow: hidden;
     visibility: hidden;
@@ -25,7 +25,7 @@ nav {
         padding: 8px;
     }
 
-    @mixin atMedium {
+    @mixin atSmall {
         position: static;
         height: auto;
         width: auto;
@@ -64,7 +64,7 @@ nav.show{
             background-color: black;
             color: white;
             margin: 0;
-            padding: 20px 0;
+            padding: 40px 0;
         }
         & button {
             width: 100%;
@@ -76,10 +76,11 @@ nav.show{
         & a {
             background-color: black;
             color: white;
-            padding: 40px 140px;
+            padding: 40px 40px;
+            font-size: 2rem;
         }
         & a:hover {
-            background-color: red;
+            background-color: rgba(0,0,0,.4);
         }
     }
     
@@ -104,14 +105,51 @@ nav.show{
 
     &__menu-icon {
         width: 20px;
-        height: 20px;
+        height: 19px;
         position: absolute;
-        background-color: blue;
         top: 30px;
         right: 20px;
         z-index: 10;
+        &--fixed {
+            position: fixed;
+        }
 
-        @mixin atMedium {
+
+        &__top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: black;
+            &.white {
+                background-color: white;
+            }
+        }
+        &__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: black;
+            &.white {
+                background-color: white;
+            }
+        }
+        &__bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: black;
+            &.white {
+                background-color: white;
+            }
+        }
+
+        @mixin atSmall {
             display: none;
         }
     }
