@@ -403,7 +403,7 @@ nav {
     margin-top: -5px;
 
     position: absolute;
-    height: 0;
+    height: 0;;
     width: 0;
     overflow: hidden;
     visibility: hidden;
@@ -427,7 +427,7 @@ nav a {
         padding: 8px;
     }
 
-@media (min-width: 800px){
+@media (min-width: 530px){
 
 nav {
         position: static;
@@ -465,7 +465,7 @@ nav.show {
             background-color: black;
             color: white;
             margin: 0;
-            padding: 20px 0;
+            padding: 40px 0;
         }
         nav.show button {
             width: 100%;
@@ -477,10 +477,11 @@ nav.show {
         nav.show a {
             background-color: black;
             color: white;
-            padding: 40px 140px;
+            padding: 40px 40px;
+            font-size: 2rem;
         }
         nav.show a:hover {
-            background-color: red;
+            background-color: rgba(0,0,0,.4);
         }
     }
 
@@ -507,19 +508,61 @@ nav.show {
 
 .header__menu-icon {
         width: 20px;
-        height: 20px;
+        height: 19px;
         position: absolute;
-        background-color: blue;
         top: 30px;
         right: 20px;
         z-index: 10;
     }
 
-@media (min-width: 800px){
+.header__menu-icon--fixed {
+            position: fixed;
+        }
+
+.header__menu-icon__top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: black;
+        }
+
+.header__menu-icon__top.white {
+                background-color: white;
+            }
+
+.header__menu-icon__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: black;
+        }
+
+.header__menu-icon__middle.white {
+                background-color: white;
+            }
+
+.header__menu-icon__bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: black;
+        }
+
+.header__menu-icon__bottom.white {
+                background-color: white;
+            }
+
+@media (min-width: 530px){
 
 .header__menu-icon {
-            display: none
-    }
+            display: none;
+  }
     }
 
 .headline {
