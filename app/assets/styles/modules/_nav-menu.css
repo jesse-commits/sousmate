@@ -110,6 +110,7 @@ nav.show{
         top: 30px;
         right: 20px;
         z-index: 10;
+        
         &--fixed {
             position: fixed;
         }
