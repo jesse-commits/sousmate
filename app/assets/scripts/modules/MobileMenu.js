@@ -1,11 +1,11 @@
 class MobileMenu {
 
     constructor(){
-        this.ourIcon = document.getElementById('menu-icon')
-        this.menuTop = document.getElementById('menu-icon__top')
-        this.menuMiddle = document.getElementById('menu-icon__middle')
-        this.menuBottom = document.getElementById('menu-icon__bottom')
-        this.ourMenu = document.getElementById('menu')
+        this.ourIcon = document.querySelector('.header__menu-icon')
+        this.menuTop = document.querySelector('.header__menu-icon__top')
+        this.menuMiddle = document.querySelector('.header__menu-icon__middle')
+        this.menuBottom = document.querySelector('.header__menu-icon__bottom')
+        this.ourMenu = document.querySelector('.menu')
         this.events()
     }
 
@@ -14,19 +14,12 @@ class MobileMenu {
     }
 
     toggleTheMenu() {
-            if(this.ourMenu.className!="show"){
-                this.ourIcon.className = "header__menu-icon header__menu-icon--fixed"
-                this.ourMenu.className = this.ourMenu.className + "show"
-                this.menuTop.className = this.menuTop.className + " white"
-                this.menuMiddle.className = this.menuMiddle.className + " white"
-                this.menuBottom.className = this.menuBottom.className + " white"
-            }else {
-                this.ourMenu.className = ""
-                this.menuTop.classList.remove("white")
-                this.menuMiddle.classList.remove("white")
-                this.menuBottom.classList.remove("white")
-                this.ourIcon.classList.remove("header__menu-icon--fixed")
-            }
+            
+                this.ourIcon.classList.toggle("header__menu-icon--fixed")
+                this.ourMenu.classList.toggle("show")
+                this.menuTop.classList.toggle("white")
+                this.menuMiddle.classList.toggle("white")
+                this.menuBottom.classList.toggle("white")
         
         }
     }
